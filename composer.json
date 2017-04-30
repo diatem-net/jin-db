@@ -1,0 +1,30 @@
+{
+    "name": "diatem-net/jin-db",
+    "description": "Utility classes to work with databases.",
+    "type": "library",
+    "license": "GPLv3",
+    "authors": [
+        {
+            "name": "Loïc Gérard",
+            "email": "lgerard@diatem.net"
+        },
+        {
+            "name": "Samuel Marchal",
+            "email": "smarchal@diatem.net"
+        },
+        {
+            "name": "Jean-Luc Fritz",
+            "email": "jlfritz@diatem.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0",
+        "diatem-net/jin-cache": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jin2\\": "src/"
+        }
+    }
+}
