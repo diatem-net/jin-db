@@ -21,7 +21,7 @@ class DbConnexion
   /**
    * @var boolean Indique si la connexion a été ouverte avec succès
    */
-  private static $cnxOpened = false;
+  protected static $cnxOpened = false;
 
   /**
    * Initialise la connexion sur une Base de données PostgreSQL

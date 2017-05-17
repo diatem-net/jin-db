@@ -56,7 +56,7 @@ class SQLitePDO extends \PDO
   /**
    * Implémentation de la méthode PHP sem_get pour compatibilité descendante.
    */
-  private function sem_get($key)
+  protected function sem_get($key)
   {
     return fopen(__FILE__ . '.sem.' . $key, 'w+');
   }
@@ -64,7 +64,7 @@ class SQLitePDO extends \PDO
   /**
    * Implémentation de la méthode PHP sem_acquire pour compatibilité descendante.
    */
-  private function sem_acquire($sem_id)
+  protected function sem_acquire($sem_id)
   {
     return flock($sem_id, LOCK_EX);
   }
@@ -72,7 +72,7 @@ class SQLitePDO extends \PDO
   /**
    * Implémentation de la méthode PHP sem_release pour compatibilité descendante.
    */
-  private function sem_release($sem_id)
+  protected function sem_release($sem_id)
   {
     return flock($sem_id, LOCK_UN);
   }
@@ -84,7 +84,7 @@ class SQLitePDO extends \PDO
    * @param  string $proj
    * @return string
    */
-  private function ftok($filename = "", $proj = "")
+  protected function ftok($filename = "", $proj = "")
   {
     if (!function_exists('ftok')) {
       if (empty($filename) || !file_exists($filename)) {

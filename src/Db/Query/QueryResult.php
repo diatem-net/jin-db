@@ -18,7 +18,7 @@ class QueryResult implements \Iterator
    *
    * @var array   Data
    */
-  private $resultat = array();
+  protected $resultat = array();
 
   /**
    * Constructeur
@@ -193,7 +193,7 @@ class QueryResult implements \Iterator
    *
    * @return array
    */
-  private function getDatasInArrayWithoutNumericHeaders()
+  protected function getDatasInArrayWithoutNumericHeaders()
   {
     $tempData = $this->resultat;
     if ($this->count() > 0) {

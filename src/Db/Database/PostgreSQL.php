@@ -42,7 +42,7 @@ class PostgreSQL
   /**
    * @var string  Chaine de connexion
    */
-  private $dns = null;
+  protected $dns = null;
 
   /**
    * @var \PDO    Objet PDO gérant la connexion

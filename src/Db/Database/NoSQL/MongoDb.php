@@ -16,23 +16,23 @@ class MongoDB
   /**
    * @var object  Objet connexion
    */
-  private static $cnxHandler;
+  protected static $cnxHandler;
 
   /**
    * @var string Host
    */
-   private static $host;
+   protected static $host;
 
   /**
    *
    * @var integer Port
    */
-  private static $port;
+  protected static $port;
 
   /**
    * @var string DB actuellement selectionnée
    */
-  private static $db;
+  protected static $db;
 
   /**
    * Etablit la connexion avec le serveur MongoDB
@@ -60,7 +60,7 @@ class MongoDB
    *
    * @throws \Exception
    */
-  private static function checkConnexion()
+  protected static function checkConnexion()
   {
     if (!self::$cnxHandler) {
       throw new \Exception('Connexion à MongoDB non initialisée. (Utilisez MongoDB::connect())');

@@ -19,13 +19,13 @@ class Query
   /**
    *  @var array  Liste des arguments
    */
-  private $arguments = array();
+  protected $arguments = array();
 
   /**
    *
    * @var array   Typage des arguments
    */
-  private $argumentsType = array();
+  protected $argumentsType = array();
 
   /**
    *  @var integer    Type SQL chaîne de caractères
@@ -55,17 +55,17 @@ class Query
   /**
    *  @var \PDO  Query préparée
    */
-  private $query = NULL;
+  protected $query = NULL;
 
   /**
    *  @var string Requête SQL
    */
-  private $sql = NULL;
+  protected $sql = NULL;
 
   /**
    *  @var array[]    Résultats de la requête
    */
-  private $resultat = NULL;
+  protected $resultat = NULL;
 
   /**
    * Constructeur

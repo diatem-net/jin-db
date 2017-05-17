@@ -10,13 +10,13 @@ namespace Jin2\Db\Query;
 class QueryOfQuery
 {
 
-  private $query;
-  private $queryResult;
-  private $fields = '*';
-  private $conditions = array();
-  private $strCondition = '';
-  private $orderBy;
-  private $orderBySens = 'ASC';
+  protected $query;
+  protected $queryResult;
+  protected $fields = '*';
+  protected $conditions = array();
+  protected $strCondition = '';
+  protected $orderBy;
+  protected $orderBySens = 'ASC';
 
   public function __construct(Query $query = null, QueryResult $queryResult = null, $fields = '*')
   {
@@ -94,17 +94,17 @@ class QueryOfQuery
     $this->orderBy = $field;
   }
 
-  private function testOrderASC($a, $b)
+  protected function testOrderASC($a, $b)
   {
     return strnatcmp($a[$this->orderBy], $b[$this->orderBy]);
   }
 
-  private function testOrderDESC($a, $b)
+  protected function testOrderDESC($a, $b)
   {
     return strnatcmp($b[$this->orderBy], $a[$this->orderBy]);
   }
 
-  private function testLine($v)
+  protected function testLine($v)
   {
     return eval($this->strCondition);
   }
