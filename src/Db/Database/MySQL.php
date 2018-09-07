@@ -11,7 +11,7 @@ namespace Jin2\Db\Database;
  * Connexion aux bases de données MySql (Ne pas utiliser cette classe directement).
  * Utiliser la classe Jin2\Db\Database\DbConnexion.
  */
-class MySQL
+class MySql
 {
 
   /**
