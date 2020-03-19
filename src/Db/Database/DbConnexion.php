@@ -63,7 +63,7 @@ class DbConnexion
    */
   public static function connectWithSqLite3($fileName)
   {
-    self::$cnxHandler = new SqLite3($fileName);
+    self::$cnxHandler = new SQLite3($fileName);
     return self::$cnxHandler->connect();
   }
 
